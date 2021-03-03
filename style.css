@@ -1,0 +1,28 @@
+body{
+	margin: 0;padding: 0;font-size: 20px; background: gray;
+}
+header{
+	display: flex; padding: 3% 0;background:rgb(204, 125, 125);
+}
+header .logo{ text-align: center;width: 50% }
+header .contact{text-align: center;width: 50%}
+
+section{display: flex;}
+section .leftbar{width: 18%;background: yellow;padding: 1%;}
+section .mainbar{width: 58%; background:rgb(82, 172, 82);padding: 1%;}
+section .target{background-color: rgb(156, 77, 77)}
+section .rightbar{width: 18%;background:lightblue;padding: 1%;}
+
+footer{background:rgb(163, 95, 95); padding: 3%}
+
+@media screen and (max-width: 600px){
+	header, section{
+		flex-direction: column;
+	}
+	.logo, .contact{
+		width: 100%;
+	}
+	section .leftbar, section .mainbar, section .rightbar{
+		width: 96%;padding: 3%;
+	}
+}
