@@ -3,9 +3,9 @@
     require 'connect.php';
     require 'DatabaseTable.php';
 
-    class UserTest extends TestCase {
+    class UserTest extends \PHPunit\Framework\TestCase {
         public function testNoDOB(){
-            $users = new DatabaseTable('person');
+            $users = new DatabaseTable();
             $testdata = [
                 'firtname' => 'Ram',
                 'surname' => 'Sharma',
@@ -13,7 +13,7 @@
                 'birthday' => '',
 
             ];
-            $check = $users-> insert($testdata);
+            $check = $users-> save($pdo, 'person', $testdata);
             $this->assertTrue($check);
         }
     }
